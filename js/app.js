@@ -29,7 +29,7 @@ function win(user, computer) {
 function loses(user, computer) {
   compScore_span.innerHTML = ++compScore;
   result_div.innerHTML = `${computer.toUpperCase()} beats ${user.toUpperCase()}. You lose!</p>`;
-  comp_choice.classList.add('winner');
+  comp_choice.classList.add('comp-winner');
 }
 
 function draw(user, computer) {
@@ -40,7 +40,7 @@ function game(userChoice) {
   gameCount++;
   choices.hidden = true;
   user_choice.classList.remove('ready', 'winner');
-  comp_choice.classList.remove('ready', 'winner');
+  comp_choice.classList.remove('ready', 'comp-winner');
 
   const compChoice = getComputerChoice();
 
@@ -64,8 +64,9 @@ function game(userChoice) {
 
   setTimeout(()=>{
     choices.hidden = false;
-    console.log(gameCount);
-    if(gameCount==5) {
+    user_choice.classList.remove('winner');
+    comp_choice.classList.remove('comp-winner');
+      if(gameCount==5) {
       startPanel.hidden = true;
       resultPanel.hidden = false
       finalResult.innerHTML = userScore > compScore ? 'ดวงดีนี่!!! ไปเป็นประธานบริษัทเถอะ 🎊' : 'ดวงยังไม่ถึง 😅 พยายามเข้านะ';
