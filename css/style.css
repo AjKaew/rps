@@ -115,6 +115,7 @@ header > h1 {
   font-weight: bold;
   font-size: 20px;
   margin-top: 5px;
+  display: none;
 }
 
 #overlay {
