@@ -37,7 +37,6 @@ function draw(user, computer) {
 }
 
 function game(userChoice) {
-  gameCount++;
   choices.hidden = true;
   user_choice.classList.remove('ready', 'winner');
   comp_choice.classList.remove('ready', 'comp-winner');
@@ -66,7 +65,7 @@ function game(userChoice) {
     choices.hidden = false;
     user_choice.classList.remove('winner');
     comp_choice.classList.remove('comp-winner');
-      if(gameCount==5) {
+      if(userScore==3 || compScore==3) {
       startPanel.hidden = true;
       resultPanel.hidden = false
       finalResult.innerHTML = userScore > compScore ? 'ดวงดีนี่!!! ไปเป็นประธานบริษัทเถอะ 🎊' : 'ดวงยังไม่ถึง 😅 พยายามเข้านะ';
@@ -75,7 +74,6 @@ function game(userChoice) {
   }, 1500);
 }
 
-let gameCount = 0;
 function start() {
   if(playerName.value != '') {
     overlay.hidden = true;
