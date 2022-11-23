@@ -22,18 +22,18 @@ function getComputerChoice() {
 
 function win(user, computer) {
   userScore_span.innerHTML = ++userScore;
-  result_div.innerHTML = `${user.toUpperCase()} beats ${computer.toUpperCase()}. You win!</p>`;
+  result_div.innerHTML = `You win!</p>`;
   user_choice.classList.add('winner');
 }
 
 function loses(user, computer) {
   compScore_span.innerHTML = ++compScore;
-  result_div.innerHTML = `${computer.toUpperCase()} beats ${user.toUpperCase()}. You lose!</p>`;
+  result_div.innerHTML = `You lose!</p>`;
   comp_choice.classList.add('comp-winner');
 }
 
 function draw(user, computer) {
-  result_div.innerHTML = `It was a draw! You both chose ${user.toUpperCase()}`;
+  result_div.innerHTML = `It was a draw!`;
 }
 
 function game(userChoice) {

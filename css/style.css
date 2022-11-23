@@ -25,26 +25,26 @@ header > h1 {
 
 .score-board {
   position: fixed;
-  top: 130px;
+  top: 85px;
   border: 3px solid white;
   border-radius: 4px;
-  width: 280px;
+  width: 220px;
   font-family: 'Unlock', cursive;
-  font-size: 120px;
+  font-size: 86px;
   padding: 40px 20px 10px;
 }
 
 #user_board {
-  left: 50px;
+  left: 7px;
 }
 
 #comp_board {
-  right: 50px;
+  right: 7px;
 }
 
 .badge {
   background-color: #e25840;
-  font-size: 26px;
+  font-size: 24px;
   font-family: Calibri, sans-serif;
   padding: 2px 0;
   text-align: center;
@@ -65,7 +65,7 @@ header > h1 {
 } */
 
 #result {
-  margin-top: 100px;
+  margin-top: 43px;
   font-family: Calibri, sans-serif;
   font-size: 40px;
   font-weight: bold;
